@@ -4,17 +4,12 @@ import preact from '@preact/preset-vite'
 export default defineConfig(({ mode }) => {
   if (mode === 'test') {
     return {
-      plugins: [
-        {
-          name: 'test',
-          options(opts) {
-            opts.input = ['./src/index.tsx']
-            opts.preserveEntrySignatures = 'allow-extension'
-          },
-        },
-      ],
       build: {
         minify: false,
+        rollupOptions: {
+          input: ['./src/index.tsx'],
+          preserveEntrySignatures: 'allow-extension',
+        },
       },
     }
   }

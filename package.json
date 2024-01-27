@@ -12,6 +12,10 @@
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.8.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-swc": "^0.3.0",
+    "rollup": "^4.9.6",
+    "rollup-plugin-esbuild": "^6.1.1",
     "typescript": "^5.3.3",
     "vite": "^5.0.12"
   }
